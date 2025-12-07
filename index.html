@@ -12,203 +12,237 @@
 
 
 <body>
-    <header>
-        <div>
-            <img src="assets/icons/LOGO.png" alt="Revo - Ваш персональный кофе">
+    <header class="header">
+        <div class="header__left">
+            <img src="assets/icons/LOGO.png" alt="Revo - Ваш персональный кофе" class="header__logo">
         </div>
 
-        <h1>ВАШ ПЕРСОНАЛЬНЫЙ КОФЕ</h1>
+        <h1 class="header__title">
+            <span class="header__title-part">ВАШ</span><br>
+            <span class="header__title-part header__title-part--highlighted">ПЕРСОНАЛЬНЫЙ</span><br>
+            <span class="header__title-part">КОФЕ</span>
+        </h1>
 
         <div>
-
-            <img src="assets/icons/shopping-cart-3.png" alt="Корзина">
-
-            <nav>
-                 <ul>
-                    <li><a>ГЛАВНАЯ</a></li>
-                    <li><a>КОФЕ</a></li>
-                    <li><a>ФИЛЬТР</a></li>
-                    <li><a>КОМБО С&nbsp;ФИЛЬТРОМ</a></li>
-                    <li><a>ПОДАРОЧНЫЙ НАБОР</a></li>
-                    <li><a>КОНТАКТЫ</a></li>
-                 </ul>
-    </nav>
-
+            <img src="assets/img/banner.png" alt="Баннер" class="banner">
         </div>
+
+        <nav class="header__nav nav">
+
+            <div class="nav__cart-wrapper">
+                <img src="assets/icons/shopping-cart-3.png" alt="Корзина" class="nav__cart-icon">
+            </div>
+
+            <ul class="nav__list">
+               <li  class="nav__item"><a href="#features" class="nav__link"><a>ГЛАВНАЯ</a></li>
+               <li  class="nav__item"><a href="#products" class="nav__link"><a>КОФЕ</a></li>
+               <li  class="nav__item"><a href="#filter" class="nav__link"><a>ФИЛЬТР</a></li>
+               <li  class="nav__item"><a href="#combo" class="nav__link"><a>КОМБО С&nbsp;ФИЛЬТРОМ</a></li>
+               <li  class="nav__item"><a href="#giftset" class="nav__link"><a>ПОДАРОЧНЫЙ НАБОР</a></li>
+               <li  class="nav__item"><a href="#feedback" class="nav__link"><a>КОНТАКТЫ</a></li>
+            </ul>
+        </nav>
+
+    
     </header>
 
 
 
-    <section>
-        <header>
-            <h5>Ваш персональный кофе</h5>
-            <h2>Кофе&nbsp;&mdash; выбери свою основу</h2>
+    <section class="section section--features" id="features">
+        <header class="section__header">
+            <h5 class="section__subtitle">Ваш персональный кофе</h5>
+            <h2 class="section__title">Кофе&nbsp;&mdash; выбери свою основу</h2>
         </header>
 
-        <article>
-            <img src="assets/icons/ic.png" alt="Источник">
+        <div class="feature-grid">
+            <article class="feature-card">
+                <img src="assets/icons/ic.png" alt="Источник" class="feature-card__icon">
+                <h4 class="feature-card__title">Происхождение</h4>
+                <p class="feature-card__text">Однозначно, непосредственные участники технического прогресса рассмотрены исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых предпосылок.</p>
+            </article>
 
-            <h4>Происхождение</h4>
+            <article class="feature-card">
+                <img src="assets/icons/IC(1).png" alt="Качество" class="feature-card__icon">
+                <h4 class="feature-card__title">Качество</h4>
+                <p class="feature-card__text">Но&nbsp;высокое качество позиционных исследований не&nbsp;оставляет шанса для системы массового участия.</p>
+            </article>
 
-            <p>Однозначно, непосредственные участники технического прогресса рассмотрены исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых предпосылок.</p>
-        </article>
-        <article>
-            
-            <img src="assets/icons/IC(1).png" alt="Качество">
+            <article class="feature-card">
+                <img src="assets/icons/IC(2).png" alt="Сорта зерен" class="feature-card__icon">
+                <h4 class="feature-card__title">Виды зёрен</h4>
+                <p class="feature-card__text">Следует отметить, что высокотехнологичная концепция общественного уклада напрямую зависит от&nbsp;укрепления моральных ценностей.</p>
+            </article>
 
-            <h4>Качество</h4>
-
-           <p>Но&nbsp;высокое качество позиционных исследований не&nbsp;оставляет шанса для системы массового участия.</p>
-        </article>
-        <article>
-            <img src="assets/icons/IC(2).png" alt="Сорта зерен">
-
-            <h4>Виды зёрен</h4>
-
-            <p>Следует отметить, что высокотехнологичная концепция общественного уклада напрямую зависит от&nbsp;укрепления моральных ценностей.</p>
-        </article>
-        <article>
-            <img src="assets/icons/IC(3).png" alt="Приготовление">
-
-            <h4>Приготовление</h4>
-
-            <p>С&nbsp;учётом сложившейся международной обстановки, начало повседневной работы по&nbsp;формированию позиции предопределяет высокую востребованность системы массового участия!</p>
-        </article>
+            <article class="feature-card">
+                <img src="assets/icons/IC(3).png" alt="Приготовление" class="feature-card__icon">
+                <h4 class="feature-card__title">Приготовление</h4>
+                <p class="feature-card__text">С&nbsp;учётом сложившейся международной обстановки, начало повседневной работы по&nbsp;формированию позиции предопределяет высокую востребованность системы массового участия!</p>
+            </article>
+        </div>
         
     </section>
 
 
-    <section>
-        <header>
-            <h5>Выбери свой любимый</h5>
-         
-            <h2>Традиционный кофе</h2>
-        </header>  
-            
-        <article>
-            <img src="assets/img/IMAGE.png" alt="Кофе Утро">
-            <h6>99.000</h6>
-            <h4>Рево Утро</h4>
-            <p>Но&nbsp;перспективное планирование влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации соответствующих условий активизации.</p>
-            <h6>Купить</h6>
-            <h6>Подробнее</h6>  
-        </article>
-        <article>
-            <img src="assets/img/IMAGE(3).png" alt="Кофе Дам Да">
-            <h6>75.000</h6>
-            <h4>Рево Дам Да</h4>
-            <p>Ясность нашей позиции очевидна: сложившаяся структура организации влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации кластеризации усилий.</p>
-            <h6>Купить</h6>
-            <h6>Подробнее</h6>   
-        </article>
-        <article>
-            <img src="assets/img/IMAGE(2).png" alt="Кофе Каждый день">
-            <h6>85.000</h6>
-            <h4>Рево Каждый день</h4>
-            <p>Учитывая ключевые сценарии поведения, новая модель организационной деятельности не&nbsp;оставляет шанса для новых предложений.</p>
-            <h6>Купить</h6>
-            <h6>Подробнее</h6> 
-        </article>
-        <article>
-            <img src="assets/img/image(1).png" alt="Кофе Оригинальный">
-            <h6>139.000</h6>
-            <h4>Рево Оригинальный</h4>
-            <p>Следует отметить, что консультация с&nbsp;широким активом не&nbsp;оставляет шанса для укрепления моральных ценностей.</p>
-            <h6>Купить</h6>
-            <h6>Подробнее</h6> 
-        </article>
-    </section>
-
-
-    <section>
-        <header>
-            <h5>Лучший подарок для друга</h5>
-            <h2>Подарочный набор</h2>
+    <section class="section section--products" id="products">
+        <header class="section__header">
+            <h5 class="section__subtitle">Выбери свой любимый</h5>
+            <h2 class="section__title">Традиционный кофе</h2>
         </header>
 
-        <img src="assets/img/pr-0018-r.png" alt="Подарочный набор кофе">
+        <div class="product-grid">
+            <article class="product-card">
+                <img src="assets/img/IMAGE.png" alt="Кофе Утро" class="product-card__image">
 
-        <article>
-            <header>
-            <h6>285.000</h6>
-            <h4>Подарочный набор &laquo;Прямо из&nbsp;Вьетнама&raquo;</h4>
-            </header>
+            <div class="product-card__content">
+                <h6 class="product-card__price">99.000</h6>
+                <h4 class="product-card__name">Рево Утро</h4>
+                <p class="product-card__desc">Но перспективное планирование влечет за собой процесс внедрения и модернизации соответствующих условий активизации.</p>
+                <div class="product-card__actions">
+                    <button class="button button--primary">Купить</button>
+                    <a href="#" class="button button--secondary">Подробнее</a>
+            </div>
+    </div>
+            </article>
 
-            <p>Вот вам яркий пример современных тенденций&nbsp;&mdash; убеждённость некоторых оппонентов обеспечивает широкому кругу (специалистов) участие в&nbsp;формировании первоочередных требований. Также как синтетическое тестирование требует анализа направлений прогрессивного развития. Задача организации, в&nbsp;особенности&nbsp;же новая модель организационной деятельности требует от&nbsp;нас анализа анализа существующих паттернов поведения.</p>
+            <article class="product-card">
+                <img src="assets/img/IMAGE(3).png" alt="Кофе Дам Да" class="product-card__image">
+                <div class="product-card__content">
+                <h6 class="product-card__price">75.000</h6>
+                <h4 class="product-card__name">Рево Дам Да</h4>
+                <p class="product-card__desc">Ясность нашей позиции очевидна: сложившаяся структура организации влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации кластеризации усилий.</p>
+                <div class="product-card__actions">
+                    <button class="button button--primary">Купить</button>
+                    <a href="#" class="button button--secondary">Подробнее</a>
+                </div>
+                </div>
+            </article>
 
-            <img src="assets/icons/IC_coffee.png" alt="Иконка кофейные зерна">
-            <p>Сорт</p>
-            <h6>Смесь из&nbsp;отборной робусты</h6>
+            <article class="product-card">
+                <img src="assets/img/IMAGE(2).png" alt="Кофе Каждый день" class="product-card__image">
+                <div class="product-card__content">
+                <h6 class="product-card__price">85.000</h6>
+                <h4 class="product-card__name">Рево Каждый день</h4>
+                <p class="product-card__desc">Учитывая ключевые сценарии поведения, новая модель организационной деятельности не&nbsp;оставляет шанса для новых предложений.</p>
+                <div class="product-card__actions">
+                    <button class="button button--primary">Купить</button>
+                    <a href="#" class="button button--secondary">Подробнее</a>
+                </div>
+                </div>
+            </article>
 
-            <img src="assets/icons/IC_Mountain.png" alt="Иконка горы">
-            <p>Высота</p>
-            <h6>700&nbsp;&mdash; 800m</h6>
-
-            <footer>
-                <h6>Купить</h6>
-                <h6>Подробнее</h6> 
-            </footer>
-            
-        </article>
-
+            <article class="product-card">
+                <img src="assets/img/image(1).png" alt="Кофе Оригинальный" class="product-card__image">
+                <div class="product-card__content">
+                <h6 class="product-card__price">139.000</h6>
+                <h4 class="product-card__name">Рево Оригинальный</h4>
+                <p class="product-card__desc">Следует отметить, что консультация с&nbsp;широким активом не&nbsp;оставляет шанса для укрепления моральных ценностей.</p>
+                <div class="product-card__actions">
+                    <button class="button button--primary">Купить</button>
+                    <a href="#" class="button button--secondary">Подробнее</a>
+                </div>
+                </div>
+            </article>
+        </div>
     </section>
 
 
-    <section>
-        <header>
-            <h5>Ваш персональный кофе</h5>
-            <h2>Комбо с&nbsp;фильтром</h2>
+    <section class="section section--giftset" id="giftset">
+        <header class="section__header">
+            <h5 class="section__subtitle">Лучший подарок для друга</h5>
+            <h2 class="section__title">Подарочный набор</h2>
         </header>
 
-        <article>
-            <img src="assets/img/image(6).png" alt="Кофе Комбо Рево Дам Да">
-            <header>
-                <h6>147.000</h6>
-                <h4>Комбо Рево Дам Да</h4>
-            </header>
-            
-            <p>Как уже неоднократно упомянуто, независимые государства будут призваны к&nbsp;ответу.</p>
+        <div class="giftset-container">
+            <img src="assets/img/pr-0018-r.png" alt="Подарочный набор кофе" class="giftset__image">
 
-            <footer>
-                <h6>Купить</h6>
-                <h6>Подробнее</h6> 
-            </footer>
-        </article>
-        <article>
-            <img src="assets/img/image(7).png" alt="Кофе Комбо Рево Каждый день">
-            <header>
-                <h6>156.000</h6>
-                <h4>Комбо Рево Каждый день</h4>
-            </header>
-            
-            <p>Лишь многие известные личности формируют глобальную экономическую сеть и&nbsp;при этом&nbsp;&mdash; представлены в&nbsp;исключительно положительном свете.</p>
+            <article class="giftset__details">
+                <header class="giftset__header">
+                    <h6 class="giftset__price">285.000</h6>
+                    <h4 class="giftset__name">Подарочный набор &laquo;Прямо из&nbsp;Вьетнама&raquo;</h4>
+                </header>
 
-            <footer>
-                <h6>Купить</h6>
-                <h6>Подробнее</h6>
-            </footer>
-        </article>
-        <article>
-            <img src="assets/img/image(8).png" alt="Кофе Комбо Рево Мед">
-            <header>
-                <h6>275.000</h6>
-                <h4>Комбо Рево Мед</h4>
-            </header>
-            
-            <p>Безусловно, семантический разбор внешних противодействий влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации дальнейших направлений развития.</p>
+                <p class="giftset__desc">Вот вам яркий пример современных тенденций&nbsp;&mdash; убеждённость некоторых оппонентов обеспечивает широкому кругу (специалистов) участие в&nbsp;формировании первоочередных требований. Также как синтетическое тестирование требует анализа направлений прогрессивного развития. Задача организации, в&nbsp;особенности&nbsp;же новая модель организационной деятельности требует от&nbsp;нас анализа анализа существующих паттернов поведения.</p>
 
-            <footer>
-                <h6>Купить</h6>
-                <h6>Подробнее</h6>
-            </footer>
-        </article>
+                <div class="giftset__specs">
+                    <div class="spec-item">
+                        <img src="assets/icons/IC_coffee.png" alt="Иконка кофейные зерна" class="spec-item__icon">
+                        
+                        <div class="spec-item__text">
+                            <p class="spec-item__label">Сорт</p>
+                            <h6 class="spec-item__value">Смесь из отборной робусты</h6>
+                        </div>
+                    </div>
 
+                    <div class="spec-item">
+                        <img src="assets/icons/IC_Mountain.png" alt="Иконка горы" class="spec-item__icon">
+                        <div class="spec-item__text">
+                            <p class="spec-item__label">Высота</p>
+                            <h6 class="spec-item__value">700 — 800m</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="giftset__actions">
+                    <button class="button button--primary">Купить</button>
+                    <a href="#" class="button button--secondary">Подробнее</a>
+                </footer>
+            </article>
+        </div>
+    </section>
+
+
+     <section class="section section--combo" id="combo">
+        <header class="section__header">
+            <h5 class="section__subtitle">Ваш персональный кофе</h5>
+            <h2 class="section__title">Комбо с&nbsp;фильтром</h2>
+        </header>
+
+        <div class="combo-grid">
+            <article class="combo-card">
+                <img src="assets/img/image(6).png" alt="Кофе Комбо Рево Дам Да" class="combo-card__image">
+                <header class="combo-card__header">
+                    <h6 class="combo-card__price">147.000</h6>
+                    <h4 class="combo-card__name">Комбо Рево Дам Да</h4>
+                </header>
+                <p class="combo-card__desc">Как уже неоднократно упомянуто, независимые государства будут призваны к&nbsp;ответу.</p>
+                <footer class="combo-card__actions">
+                    <button class="button button--primary">Купить</button>
+                    <a href="#" class="button button--secondary">Подробнее</a>
+                </footer>
+            </article>
+
+            <article class="combo-card" id="filter">
+                <img src="assets/img/image(7).png" alt="Кофе Комбо Рево Каждый день" class="combo-card__image">
+                <header class="combo-card__header">
+                    <h6 class="combo-card__price">156.000</h6>
+                    <h4 class="combo-card__name">Комбо Рево Каждый день</h4>
+                </header>
+                <p class="combo-card__desc">Лишь многие известные личности формируют глобальную экономическую сеть и&nbsp;при этом&nbsp;&mdash; представлены в&nbsp;исключительно положительном свете.</p>
+                <footer class="combo-card__actions">
+                    <button class="button button--primary">Купить</button>
+                    <a href="#" class="button button--secondary">Подробнее</a>
+                </footer>
+            </article>
+
+            <article class="combo-card">
+                <img src="assets/img/image(8).png" alt="Кофе Комбо Рево Мед" class="combo-card__image">
+                <header class="combo-card__header">
+                    <h6 class="combo-card__price">275.000</h6>
+                    <h4 class="combo-card__name">Комбо Рево Мед</h4>
+                </header>
+                <p class="combo-card__desc">Безусловно, семантический разбор внешних противодействий влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации дальнейших направлений развития.</p>
+                <footer class="combo-card__actions">
+                    <button class="button button--primary">Купить</button>
+                    <a href="#" class="button button--secondary">Подробнее</a>
+                </footer>
+            </article>
+        </div>
     </section>
 
 
 
-    <footer>
-        <p>&copy;&nbsp;Рево Кофе Вьет Нам&nbsp;&mdash; 2018</p>
+    <footer class="footer" id="feedback">
+        <p class="footer__copyright">&copy;&nbsp;Рево Кофе Вьет Нам&nbsp;&mdash; 2018</p>
     </footer>
 </body>
 </html>

@@ -1,0 +1,518 @@
+/* Сброс */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.5;
+    color: #151D28; /* Dark gray */
+    background-color: #EDF0F5; /* Light gray */
+}
+
+/* Подключение шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Nunito:wght@400;600;700&display=swap');
+
+/* Общие стили для контейнеров */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* Шапка */
+.header {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  background-color: #EDF0F5;
+}
+
+.banner{
+  display: flex;
+  margin: 0;
+}
+
+.header__left {
+  padding: 0.3rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.header__logo {
+  height: 40px;
+  
+  position: relative;
+    margin: 7rem;
+}
+
+.header__title .header__title-part {
+    color: #2c3a4d;
+    display: block;
+    margin: 0;     
+}
+
+.header__title .header__title-part--highlighted {
+    color: #f9fafb;
+    background-color: #C7A17A;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.header__title {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3a4d;
+    text-align: left;
+    position: absolute;
+    bottom: 50px;
+    left: 350px;
+    z-index: 10;
+    line-height: 1;
+}
+
+.header__nav {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #415167;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  min-width: 300px;
+  width: auto;
+  margin: 0;
+}
+
+.nav__cart-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.nav__cart-icon {
+  height: 24px;
+  margin-right: 0.5rem;
+}
+
+.nav__list {
+  font-family: 'Montserrat', sans-serif;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  color: #EDF0F5;
+}
+
+.nav__link {
+  color: #EDF0F5;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: block; 
+  padding: 8px 12px; 
+  transition: color 0.3s ease;
+}
+
+.nav__item {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.nav__item:hover{
+  background-color: #C7A17A;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Секции */
+.section {
+    padding: 60px 0;
+}
+
+.section__header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3a4d;
+}
+
+.section__subtitle {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2c3a4d;
+    margin-bottom: 10px;
+}
+
+.section__title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 34px;
+    color: #2c3a4d;
+    text-transform: uppercase;
+}
+
+/* Особенности */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.feature-card__icon {
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.feature-card__title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #151D28;
+    margin-bottom: 15px;
+}
+
+.feature-card__text {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #151D28;
+}
+
+/* Продукты */
+.section--products {
+    position: relative; /* Для позиционирования синего бокового блока */
+    padding: 60px 0;
+}
+
+/* Синий фоновый прямоугольник слева */
+.section--products::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%; /* Ширина синего блока. Можно менять по желанию */
+    height: 100%;
+    background-color: #415167; /* Primary Color - синий */
+    z-index: -1; /* на задний план */
+}
+
+/* Контейнер для контента, чтобы он не перекрывал синий фон */
+.section--products .container {
+    position: relative;
+    z-index: 1; /* Помещаем контент поверх синего фона */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card__image {
+    width: 200px;
+    object-fit: cover;
+}
+
+.product-card__content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.product-card__price {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #C7A17A; /* Accent Color */
+    margin: 15px 20px 0;
+}
+
+.product-card__name {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #151D28;
+    margin: 10px 20px 15px;
+}
+
+.product-card__desc {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #151D28;
+    margin: 0 20px 20px;
+}
+
+.product-card__actions {
+    display: flex;
+    gap: 10px;
+    padding: 0 20px 20px;
+}
+
+/* Кнопки */
+.button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    flex: 1;
+}
+
+.button--primary {
+    background-color: #C7A17A; /* Primary Color */
+    color: #f9fafb;
+}
+
+.button--primary:hover {
+    background-color: #2c3a4d;
+}
+
+.button--secondary {
+    background-color: transparent;
+    color: #415167; /* Primary Color */
+}
+
+.button--secondary:hover {
+    background-color: #f9fafb;
+}
+
+/* Подарочный набор */
+.giftset-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.giftset__image {
+    flex: 0 0 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.giftset__details {
+    flex: 1;
+    background-color: #f9fafb;
+    padding: 50px;
+    padding-left: 25px;
+}
+
+.giftset__header {
+    margin-bottom: 20px;
+}
+
+.giftset__price {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #C7A17A; /* Accent Color */
+    margin-bottom: 10px;
+}
+
+.giftset__name {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #151D28;
+}
+
+.giftset__desc {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #151D28;
+    margin: 20px 0;
+}
+
+.giftset__specs {
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.spec-item__icon {
+    height: 30px;
+}
+
+.spec-item__label {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #151D28;
+}
+
+.spec-item__text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.spec-item__value {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.giftset__actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Комбо */
+.section--combo {
+    position: relative; /* Для позиционирования синего бокового блока */
+    padding: 60px 0;
+}
+
+/* Синий фоновый прямоугольник слева */
+.section--combo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%; /* Ширина синего блока. Можно менять по желанию */
+    height: 100%;
+    background-color: #415167; /* Primary Color - синий */
+    z-index: -1; /* на задний план */
+}
+
+/* Контейнер для контента, чтобы он не перекрывал синий фон */
+.section--combo .container {
+    position: relative;
+    z-index: 1; /* Помещаем контент поверх синего фона */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.combo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.combo-card {
+    background-color: #f9fafb;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.combo-card:hover {
+    transform: translateY(-5px);
+}
+
+.combo-card__image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.combo-card__header {
+    padding: 15px 20px;
+}
+
+.combo-card__price {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #C7A17A; /* Accent Color */
+    margin-bottom: 10px;
+}
+
+.combo-card__name {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #151D28;
+}
+
+.combo-card__desc {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #151D28;
+    padding: 0 20px 20px;
+}
+
+.combo-card__actions {
+    display: flex;
+    gap: 10px;
+    padding: 0 20px 20px;
+}
+
+/* Футер */
+.footer {
+    background-color: #EDF0F5;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #EDF0F5;
+}
+
+.footer__copyright {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #151D28;
+}
