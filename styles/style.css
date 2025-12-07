@@ -8,8 +8,8 @@
 body {
     font-family: 'Nunito', sans-serif;
     line-height: 1.5;
-    color: #151D28; /* Dark gray */
-    background-color: #EDF0F5; /* Light gray */
+    color: #151D28;
+    background-color: #EDF0F5;
 }
 
 /* Подключение шрифтов */
@@ -197,26 +197,24 @@ body {
 
 /* Продукты */
 .section--products {
-    position: relative; /* Для позиционирования синего бокового блока */
+    position: relative;
     padding: 60px 0;
 }
 
-/* Синий фоновый прямоугольник слева */
 .section--products::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 30%; /* Ширина синего блока. Можно менять по желанию */
+    width: 30%;
     height: 100%;
-    background-color: #415167; /* Primary Color - синий */
-    z-index: -1; /* на задний план */
+    background-color: #415167;
+    z-index: -1;
 }
 
-/* Контейнер для контента, чтобы он не перекрывал синий фон */
 .section--products .container {
     position: relative;
-    z-index: 1; /* Помещаем контент поверх синего фона */
+    z-index: 1;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -259,7 +257,7 @@ body {
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-    color: #C7A17A; /* Accent Color */
+    color: #C7A17A;
     margin: 15px 20px 0;
 }
 
@@ -304,7 +302,7 @@ body {
 }
 
 .button--primary {
-    background-color: #C7A17A; /* Primary Color */
+    background-color: #C7A17A;
     color: #f9fafb;
 }
 
@@ -314,7 +312,7 @@ body {
 
 .button--secondary {
     background-color: transparent;
-    color: #415167; /* Primary Color */
+    color: #415167;
 }
 
 .button--secondary:hover {
@@ -351,7 +349,7 @@ body {
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-    color: #C7A17A; /* Accent Color */
+    color: #C7A17A;
     margin-bottom: 10px;
 }
 
@@ -417,26 +415,24 @@ body {
 
 /* Комбо */
 .section--combo {
-    position: relative; /* Для позиционирования синего бокового блока */
+    position: relative;
     padding: 60px 0;
 }
 
-/* Синий фоновый прямоугольник слева */
 .section--combo::before {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
-    width: 30%; /* Ширина синего блока. Можно менять по желанию */
+    width: 30%;
     height: 100%;
-    background-color: #415167; /* Primary Color - синий */
-    z-index: -1; /* на задний план */
+    background-color: #415167; 
+    z-index: -1; 
 }
 
-/* Контейнер для контента, чтобы он не перекрывал синий фон */
 .section--combo .container {
     position: relative;
-    z-index: 1; /* Помещаем контент поверх синего фона */
+    z-index: 1;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -474,7 +470,7 @@ body {
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-    color: #C7A17A; /* Accent Color */
+    color: #C7A17A;
     margin-bottom: 10px;
 }
 
