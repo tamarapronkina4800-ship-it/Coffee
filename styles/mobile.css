@@ -1,0 +1,281 @@
+
+
+
+/* Ноутбуки (меньше 1200px) */
+@media (max-width: 1199px) {
+
+    .header {
+    justify-content: space-between;
+    padding: 0px;
+    margin: 0;
+    margin-bottom: 30px;
+    margin-left: 0px;
+  }
+
+  .banner {
+    margin: 30;
+    display: block;
+  }
+
+  .header__left {
+    margin: 0; /* сбрасываем возможный margin */
+  }
+
+  .header__logo {
+    margin: 1rem 0 0 0; /* вместо 7rem — слишком много */
+    height: 36px;
+  }
+
+  /* Заголовок: остаётся absolute, но смещаем левее */
+  .header__title {
+    left: 50px; /* было 350px — теперь адаптивно */
+    top: 500px; /* поднимаем, т.к. высота шапки может измениться */
+    font-size: 24px;
+  }
+
+  /* Навигация: оставляем как есть, но чуть уже */
+  .header__nav {
+    min-width: 250px;
+    padding: 0.8rem;
+    margin: 0;
+    width: auto;
+  }
+
+  .cta {
+    display: none;
+  }
+      
+}
+
+
+/* Планшеты (меньше 992px) */
+@media (max-width: 991px) {
+
+     .container {
+    padding: 0 15px;
+  }
+
+  .banner{
+    margin: 0;
+  }
+
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+      margin-bottom: 30px;
+    }
+  
+    .header__left {
+      margin-bottom: 15px;
+    }
+  
+    .header__logo {
+      height: 32px;
+      margin: 0px;
+      position: static;
+    }
+  
+    .header__title {
+      position: static; /* убираем absolute — иначе наезжает */
+      text-align: center;
+      width: 100%;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+  
+    .header__nav {
+      min-width: 100%;
+      padding: 1rem;
+    }
+  
+    .nav__list {
+      gap: 0.8rem;
+    }
+  
+    /* ———— СЕКЦИИ (заголовки) ———— */
+    .section {
+      padding: 40px 0;
+    }
+  
+    .section__header {
+      margin-bottom: 30px;
+    }
+  
+    .section__subtitle {
+      font-size: 18px;
+    }
+  
+    .section__title {
+      font-size: 26px;
+      line-height: 30px;
+    }
+  
+    /* ———— ОСОБЕННОСТИ (features) ———— */
+    .feature-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+  
+    .feature-card {
+      padding: 20px;
+    }
+  
+    .feature-card__icon {
+      height: 50px;
+      margin-bottom: 15px;
+    }
+  
+    .feature-card__title {
+      font-size: 20px;
+    }
+  
+    .feature-card__text {
+      font-size: 15px;
+    }
+  
+    /* ———— ПРОДУКТЫ ———— */
+    .product-grid {
+      grid-template-columns: 1fr; /* один столбец */
+    }
+  
+    .product-card {
+      flex-direction: column;
+    }
+  
+    .product-card__image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+  
+    .product-card__content {
+      padding: 15px;
+    }
+  
+    .product-card__name {
+      font-size: 20px;
+    }
+  
+    .product-card__desc,
+    .product-card__price {
+      font-size: 15px;
+    }
+  
+    /* ———— КНОПКИ ———— */
+    .button {
+      padding: 10px 16px;
+      font-size: 14px;
+    }
+  
+    /* ———— СЕКЦИЯ PRODUCTS (фоновая полоса) ———— */
+    .section--products::before,
+    .section--combo::before {
+      display: none; /* на планшетах убираем декоративные полосы */
+    }
+
+}
+
+/* Мобильные (меньше 576px) */
+@media (max-width: 576px) {
+
+    .header__sticky {
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      background-color: #EDF0F5; /* Цвет фона, как у вашего header */
+      padding: 10px 0; /* Отступы для комфорта */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .container {
+      padding: 0 10px;
+      width: auto;
+    }
+  
+    /* ———— ШАПКА ———— */
+
+    /* Скрываем меню по умолчанию */
+    .header__nav {
+      position: fixed;
+      top: 0;
+      right: -100%; /* Скрываем за пределами экрана */
+      width: 300px;
+      height: 100vh;
+      background-color: #415167;
+      padding: 1rem;
+      transition: right 0.4s ease;
+      z-index: 1000;
+      overflow-y: auto;
+    }
+
+    .nav__cart-wrapper {
+      display: flex;
+      align-items: center;
+      margin-top: 50px;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    
+    /* Показываем меню при активном классе */
+    .header__nav.active {
+      right: 0; /* Выдвигаем на экран */
+    }
+
+    .header__title {
+      font-size: 18px;
+    }
+
+    .banner{
+        width: 360px;
+    }
+
+  
+    /* ———— ЗАГОЛОВКИ СЕКЦИЙ ———— */
+    .section__title {
+      font-size: 22px;
+      line-height: 26px;
+    }
+  
+    /* ———— ПРОДУКТЫ ———— */
+    .product-card__name {
+      font-size: 16px;
+    }
+  
+    .product-card__desc,
+    .product-card__price {
+      font-size: 14px;
+    }
+  
+    /* ———— КНОПКИ ———— */
+    .button {
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    .giftset-container {
+       display: grid;
+       gap: 40px;
+       align-items: center;
+    }
+
+    .scroll-top {
+        width: 52px;
+        height: 52px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 22px;
+    }
+
+   .menu-toggle {
+     display: flex; /* Показываем гамбургер на мобильных */
+   }
+    
+    .nav-overlay.active {
+      display: block;
+    }
+ 
+}

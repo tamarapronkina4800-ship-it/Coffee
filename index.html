@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Рево-кофе</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 1024px)">
 </head>
 
 
@@ -26,8 +27,18 @@
         <div>
             <img src="assets/img/banner.png" alt="Баннер" class="banner">
         </div>
+        
 
-        <nav class="header__nav nav">
+        <!-- Гамбургер-кнопка (видна на планшетах и мобильных) --> 
+        <div class="header__sticky">
+          <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+          </button>
+        
+
+        <nav class="header__nav nav" id="mainNav">
 
             <div class="nav__cart-wrapper">
                 <img src="assets/icons/shopping-cart-3.png" alt="Корзина" class="nav__cart-icon">
@@ -43,8 +54,15 @@
             </ul>
         </nav>
 
-    
+        </div>
+
+        <!-- Кнопка CTA (только для десктопа) --> 
+        <button class="cta">Заказать</button> 
+
     </header>
+
+
+    <main class="main">
 
 
 
@@ -244,5 +262,16 @@
     <footer class="footer" id="feedback">
         <p class="footer__copyright">&copy;&nbsp;Рево Кофе Вьет Нам&nbsp;&mdash; 2018</p>
     </footer>
+
+        <!-- Кнопка "Наверх" -->
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх"> 
+        ↑ 
+    </button>
+
+    </main>
+
+    <!-- Подключение JavaScript --> 
+    <script src="scripts/menu.js"></script>
+
 </body>
 </html>

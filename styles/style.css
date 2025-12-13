@@ -36,7 +36,7 @@ body {
 
 .banner{
   display: flex;
-  margin: 0;
+  margin-left: 200px;
 }
 
 .header__left {
@@ -48,8 +48,9 @@ body {
 .header__logo {
   height: 40px;
   
-  position: relative;
-    margin: 6rem;
+  position: absolute;
+    top: 50px;
+    left: 50px;
 }
 
 .header__title .header__title-part {
@@ -71,7 +72,7 @@ body {
     text-align: left;
     position: absolute;
     top: 500px;
-    left: 250px;
+    left: 50px;
     z-index: 10;
     line-height: 1;
 }
@@ -85,6 +86,7 @@ body {
   padding: 1rem;
   min-width: 300px;
   width: auto;
+  height: 100%;
   margin: 0;
 }
 
@@ -322,6 +324,26 @@ body {
     background-color: #f9fafb;
 }
 
+.cta{
+  padding: 12px 24px;
+    border: none;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    flex: 1;
+    background-color: #2c3a4d;
+    color: #f9fafb;
+}
+
+.cta:hover{
+  background-color: #C7A17A;
+}
+
 /* Подарочный набор */
 .giftset-container {
     display: flex;
@@ -518,204 +540,76 @@ body {
 
 
 
-/* Ноутбуки (меньше 1200px) */
-@media (max-width: 1199px) {
 
-    .header {
-    justify-content: space-between;
-    padding: 0px;
-    margin: 0;
-    margin-bottom: 30px;
-    margin-left: 0px;
-  }
 
-  .banner {
-    margin: 0;
-    display: block;
-  }
-
-  .header__left {
-    margin: 0; /* сбрасываем возможный margin */
-  }
-
-  .header__logo {
-    margin: 1rem 0 0 0; /* вместо 7rem — слишком много */
-    height: 36px;
-  }
-
-  /* Заголовок: остаётся absolute, но смещаем левее */
-  .header__title {
-    left: 50px; /* было 350px — теперь адаптивно */
-    top: 500px; /* поднимаем, т.к. высота шапки может измениться */
+/* Кнопка "Наверх" */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
     font-size: 24px;
-  }
-
-  /* Навигация: оставляем как есть, но чуть уже */
-  .header__nav {
-    min-width: 250px;
-    padding: 0.8rem;
-    margin: 0;
-    width: auto;
-  }
-      
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-
-/* Планшеты (меньше 992px) */
-@media (max-width: 991px) {
-
-     .container {
-    padding: 0 15px;
-  }
-
-    .header {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 15px;
-      margin-bottom: 30px;
-    }
-  
-    .header__left {
-      margin-bottom: 15px;
-    }
-  
-    .header__logo {
-      height: 32px;
-      margin: 0;
-    }
-  
-    .header__title {
-      position: static; /* убираем absolute — иначе наезжает */
-      text-align: center;
-      width: 100%;
-      margin-bottom: 15px;
-      font-size: 22px;
-    }
-  
-    .header__nav {
-      min-width: 100%;
-      padding: 1rem;
-    }
-  
-    .nav__list {
-      gap: 0.8rem;
-    }
-  
-    /* ———— СЕКЦИИ (заголовки) ———— */
-    .section {
-      padding: 40px 0;
-    }
-  
-    .section__header {
-      margin-bottom: 30px;
-    }
-  
-    .section__subtitle {
-      font-size: 18px;
-    }
-  
-    .section__title {
-      font-size: 26px;
-      line-height: 30px;
-    }
-  
-    /* ———— ОСОБЕННОСТИ (features) ———— */
-    .feature-grid {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
-  
-    .feature-card {
-      padding: 20px;
-    }
-  
-    .feature-card__icon {
-      height: 50px;
-      margin-bottom: 15px;
-    }
-  
-    .feature-card__title {
-      font-size: 20px;
-    }
-  
-    .feature-card__text {
-      font-size: 15px;
-    }
-  
-    /* ———— ПРОДУКТЫ ———— */
-    .product-grid {
-      grid-template-columns: 1fr; /* один столбец */
-    }
-  
-    .product-card {
-      flex-direction: column;
-    }
-  
-    .product-card__image {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-  
-    .product-card__content {
-      padding: 15px;
-    }
-  
-    .product-card__name {
-      font-size: 20px;
-    }
-  
-    .product-card__desc,
-    .product-card__price {
-      font-size: 15px;
-    }
-  
-    /* ———— КНОПКИ ———— */
-    .button {
-      padding: 10px 16px;
-      font-size: 14px;
-    }
-  
-    /* ———— СЕКЦИЯ PRODUCTS (фоновая полоса) ———— */
-    .section--products::before,
-    .section--combo::before {
-      display: none; /* на планшетах убираем декоративные полосы */
-    }
-
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
 }
 
-/* Мобильные (меньше 576px) */
-@media (max-width: 820px) {
+.scroll-top:hover {
+    background: #151D28;
+    transform: scale(1.1);
+}
 
-    .container {
-      padding: 0 10px;
-    }
-  
-    /* ———— ШАПКА ———— */
-    .header__title {
-      font-size: 18px;
-    }
-  
-    /* ———— ЗАГОЛОВКИ СЕКЦИЙ ———— */
-    .section__title {
-      font-size: 22px;
-      line-height: 26px;
-    }
-  
-    /* ———— ПРОДУКТЫ ———— */
-    .product-card__name {
-      font-size: 16px;
-    }
-  
-    .product-card__desc,
-    .product-card__price {
-      font-size: 13px;
-    }
-  
-    /* ———— КНОПКИ ———— */
-    .button {
-      padding: 8px;
-      font-size: 13px;
-    }
- 
+.scroll-top:active {
+    transform: scale(0.95);
+}
+
+/* Гамбургер-кнопка (скрыта на десктопе) */
+.menu-toggle {
+  display: none; /* Сначала скрыта */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  padding: 12px 10px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-toggle__line {
+  width: 100%;
+  height: 3px;
+  background: #2c3a4d; /* Цвет линий — подберите под ваш дизайн */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Состояние открытого меню (анимация в крестик) */
+.menu-toggle.active .menu-toggle__line:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-toggle.active .menu-toggle__line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .menu-toggle__line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
